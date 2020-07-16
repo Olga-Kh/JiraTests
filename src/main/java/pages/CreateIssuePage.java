@@ -10,7 +10,7 @@ import java.time.Duration;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
-public class createIssuePage {
+public class CreateIssuePage {
 
   private WebDriver driver = null;
   private WebDriverWait wait = null;
@@ -25,7 +25,7 @@ public class createIssuePage {
   private By successPopup = By.className("aui-message-success");
 
 
-  public createIssuePage(WebDriver driver) {
+  public CreateIssuePage(WebDriver driver) {
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(20).getSeconds());
   }

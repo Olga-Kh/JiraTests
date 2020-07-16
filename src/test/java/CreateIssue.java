@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.createIssuePage;
+import pages.CreateIssuePage;
 import pages.HomePage;
 import pages.LoginPage;
 import utils.WebDriverFactory;
@@ -15,14 +15,14 @@ public class CreateIssue {
   WebDriver driver = null;
   LoginPage loginPage = null;
   HomePage homePage = null;
-  createIssuePage createIssue = null;
+  CreateIssuePage createIssue = null;
 
   @BeforeMethod
   public void setUp(){
     WebDriverFactory.createInstance("Chrome");
     driver = WebDriverFactory.getDriver();
     loginPage = new LoginPage(driver);
-    createIssue = new createIssuePage(driver);
+    createIssue = new CreateIssuePage(driver);
     homePage = new HomePage(driver);
   }
 
