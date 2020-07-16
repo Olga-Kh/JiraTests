@@ -11,7 +11,7 @@ import utils.WebDriverFactory;
 
 import java.time.Duration;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -39,37 +39,35 @@ public class CreateIssue {
     loginPage.enterPassword("OlgaKhobina");
     loginPage.clickLoginButton();
     assertTrue(homePage.userIconIsPresent());
-
-  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());
-    /*  boolean elementIsPresent = wait.until(presenceOfElementLocated(By.id("header-details-user-fullname"))).isDisplayed();
-    assertEquals(elementIsPresent, true);*/
-
-    //driver.findElement(By.id("create_link")).click();
     createIssue.issueCreateClick();
 
+    //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());
+    //boolean elementIsPresent = wait.until(presenceOfElementLocated(By.id("header-details-user-fullname"))).isDisplayed();
+    //assertEquals(elementIsPresent, true);
 
+    //driver.findElement(By.id("create_link")).click();
+
+
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20).getSeconds());
 
     wait.until(presenceOfElementLocated(By.id("project-field"))).isDisplayed();
-    driver.findElement(By.id("project-field")).clear();
+    driver.findElement(By.id("project-field")).click();
     driver.findElement(By.id("project-field")).sendKeys("Webinar (WEBINAR)");
     driver.findElement(By.id("project-field")).sendKeys(Keys.TAB);
 
-
-    threadSleep(1000);
-
-    //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("issuetype-field")));
+    wait.until(elementToBeClickable(By.id("issuetype-field")));
     driver.findElement(By.id("issuetype-field")).click();
     driver.findElement(By.id("issuetype-field")).sendKeys("Test");
     driver.findElement(By.id("issuetype-field")).sendKeys(Keys.TAB);
 
-    //threadSleep(1000);
-
-
-    wait.until(presenceOfElementLocated(By.id("summary"))).isDisplayed();
+    wait.until(elementToBeClickable(By.id("summary")));
     driver.findElement(By.id("summary")).sendKeys("...");
 
+    wait.until(elementToBeClickable(By.id("reporter-field")));
     driver.findElement(By.id("reporter-field")).clear();
     driver.findElement(By.id("reporter-field")).sendKeys("OlgaKhobina");
+    driver.findElement(By.id("reporter-field")).sendKeys(Keys.TAB);
+
 
     driver.findElement(By.xpath("(//div[@id='description-wiki-edit']//a[contains(text(),'Text')])")).click();
     driver.findElement(By.id("description")).click();
@@ -77,17 +75,9 @@ public class CreateIssue {
 
     driver.findElement(By.id("create-issue-submit")).click();
 
-    wait.until(presenceOfElementLocated(By.className("aui-message-success"))).isDisplayed();
+    assertEquals(wait.until(presenceOfElementLocated(By.className("aui-message-success"))).isDisplayed(), true);
   }
 
-  private void threadSleep(int ms)
-  {
-    try {
-      Thread.sleep(ms);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-  }
 /*  @AfterMethod
   public void tearDown(){
     driver.quit();

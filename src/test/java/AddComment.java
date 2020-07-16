@@ -37,12 +37,12 @@ public class AddComment {
     driver.findElement(By.id("comment-issue")).click();
 
     wait.until(elementToBeClickable(By.id("comment")));
-    driver.findElement(By.id("comment")).sendKeys("Comment");
+    driver.findElement(By.id("comment")).sendKeys("Very important comment");
     driver.findElement(By.id("issue-comment-add-submit")).click();
 
     wait.until(presenceOfElementLocated(By.xpath("//div[@id='issue_actions_container']//div[last()]//p"))).isDisplayed();
     String commentText = driver.findElement(By.xpath("//div[@id='issue_actions_container']//div[last()]//p")).getText();
-    assertTrue(commentText.contains("Comment"));
+    assertTrue(commentText.contains("Very important comment"));
 
     driver.findElement(By.xpath("//div[@id='issue_actions_container']//div[last()]//div[@class='action-links']//a[last()]")).click();
     wait.until(elementToBeClickable(By.id("comment-delete-submit")));
@@ -50,8 +50,7 @@ public class AddComment {
 
     wait.until(presenceOfElementLocated(By.xpath("//div[@class='message-container']"))).isDisplayed();
     String emptyComments = driver.findElement(By.xpath("//div[@class='message-container']")).getText();
-    //assertTrue(emptyComments.contains("There are no comments yet on this issue."));
-    assertTrue(emptyComments.contains("Comment"));
+    assertTrue(emptyComments.contains("There are no comments yet on this issue."));
   }
 
   @AfterMethod
