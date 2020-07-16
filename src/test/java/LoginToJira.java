@@ -28,7 +28,7 @@ public class LoginToJira {
       loginPage.enterUserName("OlgaKhobina");
       loginPage.enterPassword("OlgaKhobina");
       loginPage.clickLoginButton();
-      assertTrue(homePage.userIconIsPresent());
+      assertTrue(homePage.isUserIconIsPresent());
     }
 
     @AfterMethod

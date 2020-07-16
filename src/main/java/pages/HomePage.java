@@ -11,14 +11,16 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class HomePage {
 
   WebDriver driver = null;
+  WebDriverWait wait = null;
+  private By userPic = By.id("header-details-user-fullname");
 
   public HomePage(WebDriver driver) {
     this.driver = driver;
+    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10).getSeconds());
   }
 
-  public boolean userIconIsPresent() {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20).getSeconds());
-    return wait.until(presenceOfElementLocated(By.id("header-details-user-fullname"))).isDisplayed();
+  public boolean isUserIconIsPresent() {
+    return wait.until(presenceOfElementLocated(userPic)).isDisplayed();
   }
 
 }
