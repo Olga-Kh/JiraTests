@@ -4,6 +4,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.AddCommentPage;
+import pages.CreateIssuePage;
+import pages.HomePage;
+import pages.LoginPage;
 import utils.WebDriverFactory;
 
 import java.time.Duration;
@@ -15,32 +19,44 @@ import static org.testng.Assert.assertTrue;
 
 public class AddComment {
   WebDriver driver = null;
-
+  LoginPage loginPage = null;
+  HomePage homePage = null;
+  CreateIssuePage createIssue = null;
+  AddCommentPage addComment = null;
 
   @BeforeMethod
   public void setUp(){
     WebDriverFactory.createInstance("Chrome");
     driver = WebDriverFactory.getDriver();
+    loginPage = new LoginPage(driver);
+    createIssue = new CreateIssuePage(driver);
+    homePage = new HomePage(driver);
+    addComment = new AddCommentPage(driver);
   }
 
   @Test
-  public void addCommentToTicket(){
+  public void addCommentToTicket() {
 
-    driver.get("https://jira.hillel.it/secure/Dashboard.jspa");
-    driver.findElement(By.id("login-form-username")).sendKeys("OlgaKhobina");
-    driver.findElement(By.id("login-form-password")).sendKeys("OlgaKhobina");
-    driver.findElement(By.id("login")).click();
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());
-    assertEquals(wait.until(presenceOfElementLocated(By.id("header-details-user-fullname"))).isDisplayed(), true);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());;
 
-    driver.get("https://jira.hillel.it/browse/WEBINAR-12197");
-    driver.findElement(By.id("comment-issue")).click();
+    loginPage.navigateTo();
+    loginPage.enterUserName("OlgaKhobina");
+    loginPage.clickPasswordField();
+    loginPage.enterPassword("OlgaKhobina");
+    loginPage.clickLoginButton();
+    assertTrue(homePage.isUserIconIsPresent());
 
-    wait.until(elementToBeClickable(By.id("comment")));
-    driver.findElement(By.id("comment")).sendKeys("Very important comment");
-    driver.findElement(By.id("issue-comment-add-submit")).click();
+    addComment.navigateToTicket();
+    addComment.clickCommentIssue();
 
-    wait.until(presenceOfElementLocated(By.xpath("//div[@id='issue_actions_container']//div[last()]//p"))).isDisplayed();
+    addComment.isCommentFieldclickable();
+    addComment.clickCommentField();
+    addComment.inputCommentField("Very important comment");
+    addComment.isSubmitCommentClickable();
+    addComment.clickSubmitComment();
+
+    //wait.until(presenceOfElementLocated(By.xpath("//div[@id='issue_actions_container']//div[last()]//p"))).isDisplayed();
+    addComment.isCommentAdded();
     String commentText = driver.findElement(By.xpath("//div[@id='issue_actions_container']//div[last()]//p")).getText();
     assertTrue(commentText.contains("Very important comment"));
 
@@ -53,8 +69,8 @@ public class AddComment {
     assertTrue(emptyComments.contains("There are no comments yet on this issue."));
   }
 
-  @AfterMethod
+/*  @AfterMethod
   public void tearDown(){
     driver.quit();
-  }
+  }*/
 }

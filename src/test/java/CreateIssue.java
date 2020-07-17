@@ -18,7 +18,7 @@ public class CreateIssue {
   CreateIssuePage createIssue = null;
 
   @BeforeMethod
-  public void setUp(){
+  public void setUp() {
     WebDriverFactory.createInstance("Chrome");
     driver = WebDriverFactory.getDriver();
     loginPage = new LoginPage(driver);
@@ -27,8 +27,7 @@ public class CreateIssue {
   }
 
   @Test
-  public void successfullCreateTicket(){
-
+  public void successfullCreateTicket() {
     loginPage.navigateTo();
     loginPage.enterUserName("OlgaKhobina");
     loginPage.enterPassword("OlgaKhobina");
@@ -64,7 +63,7 @@ public class CreateIssue {
   }
 
   @AfterMethod
-  public void tearDown(){
+  public void tearDown() {
     driver.quit();
   }
 }

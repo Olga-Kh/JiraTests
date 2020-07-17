@@ -26,6 +26,10 @@ public class LoginPage {
     driver.findElement(loginButton).click();
   }
 
+  public void clickPasswordField() {
+    driver.findElement(userPassInput).click();
+  }
+
   public void navigateTo(){
     driver.get("https://jira.hillel.it/secure/Dashboard.jspa");
   }
