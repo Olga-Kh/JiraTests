@@ -17,6 +17,10 @@ public class AddCommentPage {
   private By comment = By.id("comment");
   private By submitComment = By.id("issue-comment-add-submit");
   private By lastComment = By.xpath("//div[@id='issue_actions_container']//div[last()]//p");
+  private By deleteIcon = By.xpath("//div[@id='issue_actions_container']//div[last()]//div[@class='action-links']//a[last()]");
+  private By deleteButton = By.id("comment-delete-submit");
+  private By noCommentsMessage = By.xpath("//div[@class='message-container']");
+
 
   public AddCommentPage(WebDriver driver) {
     this.driver = driver;
@@ -60,5 +64,19 @@ public class AddCommentPage {
     return lastCommentText.contains()
   }*/
 
+  public void clickDeleteIcon () {
+    driver.findElement(deleteIcon).click();
+  }
 
+  public boolean isDeleteButtonClickable() {
+    return wait.until(elementToBeClickable(deleteButton)).isDisplayed();
+  }
+
+  public void clickDeleteButton () {
+    driver.findElement(deleteButton).click();
+  }
+
+  public boolean isNoCommentsMessageDisplayed() {
+    return wait.until(presenceOfElementLocated(noCommentsMessage)).isDisplayed();
+  }
 }

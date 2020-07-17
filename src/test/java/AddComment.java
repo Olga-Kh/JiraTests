@@ -36,9 +36,6 @@ public class AddComment {
 
   @Test
   public void addCommentToTicket() {
-
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());;
-
     loginPage.navigateTo();
     loginPage.enterUserName("OlgaKhobina");
     loginPage.clickPasswordField();
@@ -55,16 +52,15 @@ public class AddComment {
     addComment.isSubmitCommentClickable();
     addComment.clickSubmitComment();
 
-    //wait.until(presenceOfElementLocated(By.xpath("//div[@id='issue_actions_container']//div[last()]//p"))).isDisplayed();
     addComment.isCommentAdded();
     String commentText = driver.findElement(By.xpath("//div[@id='issue_actions_container']//div[last()]//p")).getText();
     assertTrue(commentText.contains("Very important comment"));
 
-    driver.findElement(By.xpath("//div[@id='issue_actions_container']//div[last()]//div[@class='action-links']//a[last()]")).click();
-    wait.until(elementToBeClickable(By.id("comment-delete-submit")));
-    driver.findElement(By.id("comment-delete-submit")).click();
+    addComment.clickDeleteIcon();
+    addComment.isDeleteButtonClickable();
+    addComment.clickDeleteButton();
 
-    wait.until(presenceOfElementLocated(By.xpath("//div[@class='message-container']"))).isDisplayed();
+    addComment.isNoCommentsMessageDisplayed();
     String emptyComments = driver.findElement(By.xpath("//div[@class='message-container']")).getText();
     assertTrue(emptyComments.contains("There are no comments yet on this issue."));
   }
