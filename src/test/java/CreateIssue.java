@@ -57,7 +57,6 @@ public class CreateIssue {
     createIssue.clickDescriptionField();
     createIssue.inputDescription("Some description");
 
-    driver.findElement(By.id("create-issue-submit")).click();
     createIssue.clickSubmitIssue();
     assertTrue(createIssue.isSuccessPopupDisplayed());
   }

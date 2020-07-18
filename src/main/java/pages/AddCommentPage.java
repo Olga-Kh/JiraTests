@@ -35,8 +35,8 @@ public class AddCommentPage {
     driver.findElement(commentIssue).click();
   }
 
-  public boolean isCommentFieldclickable() {
-    return wait.until(elementToBeClickable(comment)).isDisplayed();
+  public void isCommentFieldclickable() {
+    wait.until(elementToBeClickable(comment)).isDisplayed();
   }
 
   public void clickCommentField() {
