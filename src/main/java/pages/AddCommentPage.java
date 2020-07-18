@@ -59,10 +59,10 @@ public class AddCommentPage {
     return wait.until(presenceOfElementLocated(lastComment)).isDisplayed();
   }
 
-/*  public boolean commentTextCompare(lastCommentContent) {
+  public boolean commentContainsText(String text) {
     String lastCommentText = driver.findElement(lastComment).getText();
-    return lastCommentText.contains()
-  }*/
+    return lastCommentText.contains(text);
+  }
 
   public void clickDeleteIcon () {
     driver.findElement(deleteIcon).click();
@@ -78,5 +78,10 @@ public class AddCommentPage {
 
   public boolean isNoCommentsMessageDisplayed() {
     return wait.until(presenceOfElementLocated(noCommentsMessage)).isDisplayed();
+  }
+
+  public boolean isNoCommentsTextDisplayed(String text) {
+    String emptyComments = driver.findElement(noCommentsMessage).getText();
+    return emptyComments.contains(text);
   }
 }
