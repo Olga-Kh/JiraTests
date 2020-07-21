@@ -1,6 +1,8 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -21,6 +23,23 @@ public class LoginToJira {
       loginPage = new LoginPage(driver);
       homePage = new HomePage(driver);
     }
+
+    @DataProvider(name = "Logins")
+    public Object[][] createData() {
+      return new Object[][] {
+              { "OlgaKhobina", "wrongPassword" },
+              { "wrongUserName", "OlgaKhobina" },
+      };
+    }
+
+  @Test(dataProvider = "Logins")
+  public void unsuccessfulLoginTest(String name, String password) throws InterruptedException {
+    loginPage.navigateTo();
+    loginPage.enterUserName(name);
+    loginPage.enterPassword(password);
+    loginPage.clickLoginButton();
+    assertTrue(loginPage.isErrorMessageDisplayed());
+  }
 
     @Test
     public void successfullLoginTest() {
