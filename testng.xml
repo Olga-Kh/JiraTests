@@ -1,11 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Sample Test Suite" parallel="false">
 
-<!--    <test name="Sample Test">
+    <test name="Sample Test">
+        <parameter name="browserName" value="Chrome"></parameter>
         <classes>
-            <class name="SampleTestClass"/>
+            <class name="TestWithParameters"/>
         </classes>
-    </test>-->
+    </test>
 
     <listeners>
         <listener class-name="utils.TestNGListener"/>
