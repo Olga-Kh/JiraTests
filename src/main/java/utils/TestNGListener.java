@@ -13,12 +13,12 @@ public class TestNGListener implements ITestListener {
 
   @Override
   public void onTestSuccess(ITestResult result) {
-    System.out.println("It happens after test has successfully passed, thanks to Listener & OnTestSuccess");
+    System.out.println("The name of the test passed is :" + result.getName());
   }
 
   @Override
   public void onTestFailure(ITestResult result) {
-    System.out.println("It happens after test has failed, thanks to Listener & OnTestFailure" + "\n" + "Below you can see the reason for the test to fail:");
+
   }
 
   @Override

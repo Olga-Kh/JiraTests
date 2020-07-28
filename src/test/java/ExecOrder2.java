@@ -2,16 +2,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ExecOrder {
+public class ExecOrder2 {
   @BeforeMethod
   public void beforeMethod() {
-    System.out.println("Test#1! It happens before each test and before Listener, thanks to BeforeMethod");
+    System.out.println("Test#2! It happens before each test and before Listener, thanks to BeforeMethod");
   }
 
   @Test
-  public void successfulTest() {
-    assert 1==1;
-    System.out.println("First Test");
+  public void secondSuccessfulTest() {
+    assert 1!=0;
+    System.out.println("Second test");
   }
 
   @AfterMethod

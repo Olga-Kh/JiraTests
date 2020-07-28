@@ -18,19 +18,19 @@ import java.util.concurrent.TimeUnit;
 
 public class WebDriverFactory {
 
-    private static WebDriver webDriver;
+    private static final ThreadLocal <WebDriver> webDriver = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
-        return webDriver;
+        return webDriver.get();
     }
 
-    public static void setWebDriver(WebDriver driver) {
+/*    public static void setWebDriver(WebDriver driver) {
         webDriver = driver;
-    }
+    }*/
 
-    public static void closeDriver() {
+/*    public static void closeDriver() {
         webDriver.quit();
-    }
+    }*/
 
     public static void createInstance(String browserName) {
 
@@ -38,7 +38,7 @@ public class WebDriverFactory {
         WebDriver driver = null;
 
         if (browserName.toLowerCase().contains("firefox")) {
-            WebDriverManager.firefoxdriver().setup(); // Аналог - System.setProperty("webdriver.chrome.driver","D:\List_of_Jar\chromedriver.exe"); и руками не кладем фафлик в папку
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         } else if (browserName.toLowerCase().contains("internet")) {
             WebDriverManager.iedriver().setup();
@@ -71,7 +71,7 @@ public class WebDriverFactory {
             e.printStackTrace();
         }
 
-        webDriver = driver;
+        webDriver.set(driver);
     }
 
 }
