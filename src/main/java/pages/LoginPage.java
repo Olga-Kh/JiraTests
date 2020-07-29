@@ -47,3 +47,4 @@ public class LoginPage {
     return wait.until(presenceOfElementLocated(errorMessage)).isDisplayed();
   }
 }
+

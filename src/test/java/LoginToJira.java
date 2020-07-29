@@ -42,7 +42,7 @@ public class LoginToJira {
   }
 
     @Test
-    public void successfullLoginTest() {
+    public void successfulLoginTest() {
       loginPage.navigateTo();
       loginPage.enterUserName("OlgaKhobina");
       loginPage.enterPassword("OlgaKhobina");
