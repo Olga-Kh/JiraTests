@@ -9,4 +9,4 @@ jobs:
       - run:
           name: run tests
           command: |
-            mvn clean test
+            mvn clean tes
