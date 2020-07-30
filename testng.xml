@@ -4,6 +4,7 @@
     <test name="Sample Test">
         <classes>
             <class name="LoginToJira"/>
+            <class name="ViewIssue"/>
         </classes>
     </test>
 
