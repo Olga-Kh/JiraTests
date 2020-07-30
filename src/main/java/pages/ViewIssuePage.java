@@ -16,7 +16,7 @@ public class ViewIssuePage {
   private By issuesDropdown = By.id("find_link");
   private By firstIssueInDropdown = By.xpath("//div[@id='issues_history_main']//ul/li[1]");
   //private By issueType = By.id("type-val");
-  private By ticketNumber = By.id("key-val1");
+  private By ticketNumber = By.id("key-val");
 
 
   public ViewIssuePage(WebDriver driver) {
