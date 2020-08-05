@@ -11,25 +11,25 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginToJira {
 
-    WebDriver driver = null;
-    LoginPage loginPage = null;
-    HomePage homePage = null;
+  WebDriver driver = null;
+  LoginPage loginPage = null;
+  HomePage homePage = null;
 
-    @BeforeMethod
-    public void setUp() {
-      WebDriverFactory.createInstance("Chrome");
-      driver = WebDriverFactory.getDriver();
-      loginPage = new LoginPage(driver);
-      homePage = new HomePage(driver);
-    }
+  @BeforeMethod
+  public void setUp() {
+    WebDriverFactory.createInstance("Chrome");
+    driver = WebDriverFactory.getDriver();
+    loginPage = new LoginPage(driver);
+    homePage = new HomePage(driver);
+  }
 
-    @DataProvider(name = "Logins")
-    public Object[][] createData() {
-      return new Object[][] {
-              { "OlgaKhobina", "wrongPassword" },
-              { "wrongUserName", "OlgaKhobina" },
-      };
-    }
+  @DataProvider(name = "Logins")
+  public Object[][] createData() {
+    return new Object[][]{
+            {"OlgaKhobina", "wrongPassword"},
+            {"wrongUserName", "OlgaKhobina"},
+    };
+  }
 
   @Test(dataProvider = "Logins")
   public void unsuccessfulLoginTest(String name, String password) throws InterruptedException {
@@ -40,17 +40,17 @@ public class LoginToJira {
     assertTrue(loginPage.isErrorMessageDisplayed());
   }
 
-    @Test
-    public void successfulLoginTest() {
-      loginPage.navigateTo();
-      loginPage.enterUserName("OlgaKhobina");
-      loginPage.enterPassword("OlgaKhobina");
-      loginPage.clickLoginButton();
-      assertTrue(homePage.isUserIconIsPresent());
-    }
-
-    @AfterMethod
-    public void tearDown() {
-      driver.quit();
-    }
+  @Test
+  public void successfulLoginTest() {
+    loginPage.navigateTo();
+    loginPage.enterUserName("OlgaKhobina");
+    loginPage.enterPassword("OlgaKhobina");
+    loginPage.clickLoginButton();
+    assertTrue(homePage.isUserIconIsPresent());
   }
+
+  @AfterMethod
+  public void tearDown() {
+    driver.quit();
+  }
+}

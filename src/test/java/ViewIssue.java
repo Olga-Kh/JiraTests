@@ -17,7 +17,7 @@ public class ViewIssue {
   ViewIssuePage viewIssue = null;
 
   @BeforeMethod
-  public void setUp(){
+  public void setUp() {
     WebDriverFactory.createInstance("Chrome");
     driver = WebDriverFactory.getDriver();
     loginPage = new LoginPage(driver);
@@ -39,6 +39,7 @@ public class ViewIssue {
     viewIssue.isIssueTypeDisplayed();
     viewIssue.isTicketNumberInUrl();
   }
+
   @AfterMethod
   public void tearDown() {
     driver.quit();

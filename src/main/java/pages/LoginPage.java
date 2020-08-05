@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class LoginPage {
@@ -47,4 +46,3 @@ public class LoginPage {
     return wait.until(presenceOfElementLocated(errorMessage)).isDisplayed();
   }
 }
-

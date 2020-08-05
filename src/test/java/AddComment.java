@@ -8,8 +8,6 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.WebDriverFactory;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class AddComment {
