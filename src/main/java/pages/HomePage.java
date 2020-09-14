@@ -22,5 +22,4 @@ public class HomePage {
   public boolean isUserIconIsPresent() {
     return wait.until(presenceOfElementLocated(userPic)).isDisplayed();
   }
-
 }

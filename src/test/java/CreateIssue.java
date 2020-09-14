@@ -60,8 +60,33 @@ public class CreateIssue {
     assertTrue(createIssue.isSuccessPopupDisplayed());
   }
 
-  @AfterMethod
-  public void tearDown() {
-    driver.quit();
+  @Test
+  public void cancelCreateIssue() {
+    loginPage.navigateTo();
+    loginPage.enterUserName("OlgaKhobina");
+    loginPage.enterPassword("OlgaKhobina");
+    loginPage.clickLoginButton();
+    assertTrue(homePage.isUserIconIsPresent());
+    createIssue.clickIssueCreate();
+
+    assertTrue(createIssue.isSummaryFieldClickable());
+    createIssue.inputSummary("Summary");
+
+    createIssue.clickTextTab();
+    createIssue.clickDescriptionField();
+    createIssue.inputDescription("Some description");
+
+    createIssue.clickCancelButton();
+    createIssue.dismissAlert();
+
+    createIssue.clickCancelButton();
+    createIssue.acceptAlert();
+
+    assertTrue(createIssue.didElementDisappear());
   }
+
+  @AfterMethod
+    public void tearDown() {
+      driver.quit();
+    }
 }

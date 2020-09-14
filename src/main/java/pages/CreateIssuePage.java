@@ -3,12 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 public class CreateIssuePage {
 
@@ -23,6 +24,7 @@ public class CreateIssuePage {
   private By descriptionField = By.id("description");
   private By submitIssue = By.id("create-issue-submit");
   private By successPopup = By.className("aui-message-success");
+  private By cancelCreateButton = By.xpath("(//div[@class='buttons']//a[contains(text(),'Cancel')])");
 
 
   public CreateIssuePage(WebDriver driver) {
@@ -110,5 +112,21 @@ public class CreateIssuePage {
 
   public boolean isSuccessPopupDisplayed() {
     return wait.until(presenceOfElementLocated(successPopup)).isDisplayed();
+  }
+
+  public void clickCancelButton() {
+    driver.findElement(cancelCreateButton).click();
+  }
+
+  public void acceptAlert() {
+    driver.switchTo().alert().accept();
+  }
+
+  public void dismissAlert() {
+    driver.switchTo().alert().dismiss();
+  }
+
+  public boolean didElementDisappear() {
+    return wait.until(ExpectedConditions.invisibilityOfElementLocated(submitIssue));
   }
 }
