@@ -1,0 +1,105 @@
+Index: src/main/java/pages/LoginPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\n\r\npublic class LoginPage {\r\n\r\n  private WebDriver driver = null;\r\n  private By userNameInput = By.id(\"login-form-username\");\r\n  private By userPassInput = By.id(\"login-form-password\");\r\n  private By loginButton = By.id(\"login\");\r\n\r\n  public LoginPage(WebDriver driver) {\r\n    this.driver = driver;\r\n  }\r\n\r\n  public void enterUserName(String name) {\r\n    driver.findElement(userNameInput).sendKeys(name);\r\n  }\r\n\r\n  public void enterPassword(String password) {\r\n    driver.findElement(userPassInput).sendKeys(password);\r\n  }\r\n\r\n  public void clickLoginButton() {\r\n    driver.findElement(loginButton).click();\r\n  }\r\n\r\n  public void clickPasswordField() {\r\n    driver.findElement(userPassInput).click();\r\n  }\r\n\r\n  public void navigateTo(){\r\n    driver.get(\"https://jira.hillel.it/secure/Dashboard.jspa\");\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/pages/LoginPage.java	(revision fcf86ad3e7a42ec90ca3251c102c2fbac33dca5a)
++++ src/main/java/pages/LoginPage.java	(date 1595343470918)
+@@ -2,16 +2,24 @@
+ 
+ import org.openqa.selenium.By;
+ import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.support.ui.WebDriverWait;
++
++import java.time.Duration;
++
++import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+ 
+ public class LoginPage {
+ 
+   private WebDriver driver = null;
++  private WebDriverWait wait = null;
+   private By userNameInput = By.id("login-form-username");
+   private By userPassInput = By.id("login-form-password");
+   private By loginButton = By.id("login");
++  private By errorMessage = By.id("usernameerror");
+ 
+   public LoginPage(WebDriver driver) {
+     this.driver = driver;
++    this.wait = new WebDriverWait(driver, Duration.ofSeconds(20).getSeconds());
+   }
+ 
+   public void enterUserName(String name) {
+@@ -33,4 +41,18 @@
+   public void navigateTo(){
+     driver.get("https://jira.hillel.it/secure/Dashboard.jspa");
+   }
++
++  public boolean isErrorMessageDisplayed() {
++    return wait.until(presenceOfElementLocated(errorMessage)).isDisplayed();
++  }
++
++  public boolean errorMessageIsPresent(String message) {
++    //return driver.findElement(By.xpath("//*[contains(text()," + message + " )]")).isDisplayed();
++    return driver.findElement(By.id("usernameerror")).isDisplayed();
++  }
++
++/*  public boolean errorMessageIsPresent(String message) {
++    //String emptyComments = driver.findElement(errorMessage).getText();
++    return driver.findElement(errorMessage).isDisplayed();
++  }*/
+ }
+Index: src/test/java/LoginToJira.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.openqa.selenium.WebDriver;\r\nimport org.testng.annotations.AfterMethod;\r\nimport org.testng.annotations.BeforeMethod;\r\nimport org.testng.annotations.Test;\r\nimport pages.HomePage;\r\nimport pages.LoginPage;\r\nimport utils.WebDriverFactory;\r\n\r\nimport static org.testng.Assert.assertTrue;\r\n\r\npublic class LoginToJira {\r\n\r\n    WebDriver driver = null;\r\n    LoginPage loginPage = null;\r\n    HomePage homePage = null;\r\n\r\n    @BeforeMethod\r\n    public void setUp() {\r\n      WebDriverFactory.createInstance(\"Chrome\");\r\n      driver = WebDriverFactory.getDriver();\r\n      loginPage = new LoginPage(driver);\r\n      homePage = new HomePage(driver);\r\n    }\r\n\r\n    @Test\r\n    public void successfullLoginTest() {\r\n      loginPage.navigateTo();\r\n      loginPage.enterUserName(\"OlgaKhobina\");\r\n      loginPage.enterPassword(\"OlgaKhobina\");\r\n      loginPage.clickLoginButton();\r\n      assertTrue(homePage.isUserIconIsPresent());\r\n    }\r\n\r\n    @AfterMethod\r\n    public void tearDown() {\r\n      driver.quit();\r\n    }\r\n  }\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/LoginToJira.java	(revision fcf86ad3e7a42ec90ca3251c102c2fbac33dca5a)
++++ src/test/java/LoginToJira.java	(date 1595343287794)
+@@ -1,6 +1,7 @@
+ import org.openqa.selenium.WebDriver;
+ import org.testng.annotations.AfterMethod;
+ import org.testng.annotations.BeforeMethod;
++import org.testng.annotations.DataProvider;
+ import org.testng.annotations.Test;
+ import pages.HomePage;
+ import pages.LoginPage;
+@@ -22,6 +23,14 @@
+       homePage = new HomePage(driver);
+     }
+ 
++    @DataProvider(name = "Logins")
++    public Object[][] createData() {
++      return new Object[][] {
++              { "OlgaKhobina", "wrongPassword", "Sorry, your username and password are incorrect - please try again." },
++              { "wrongUserName", "OlgaKhobina", "Sorry, your username and password are incorrect - please try again." },
++      };
++    }
++
+     @Test
+     public void successfullLoginTest() {
+       loginPage.navigateTo();
+@@ -29,6 +38,19 @@
+       loginPage.enterPassword("OlgaKhobina");
+       loginPage.clickLoginButton();
+       assertTrue(homePage.isUserIconIsPresent());
++
++
++    }
++
++    @Test(dataProvider = "Logins")
++    public void unsuccessfullLoginTest(String name, String password, String expectedResult) throws InterruptedException{
++      loginPage.navigateTo();
++      loginPage.enterUserName(name);
++      loginPage.enterPassword(password);
++      loginPage.clickLoginButton();
++      assertTrue(loginPage.isErrorMessageDisplayed());
++      assertTrue(loginPage.errorMessageIsPresent(expectedResult));
++
+     }
+ 
+     @AfterMethod

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed2ebc2f-afa1-4b64-8a36-76b9cd21eb6f" name="Default Changelist" comment="cmd run results screen added" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ePPx3pYLs1PazZFcWQNS27BqJ8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/Olga/IdeaProjects/JiraTests/testng.xml">
+    <configuration name="C:/Users/Olga/IdeaProjects/JiraTests/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraTests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateIssue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateIssue" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateIssue.cancelCreateIssue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateIssue" />
+      <option name="METHOD_NAME" value="cancelCreateIssue" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewIssue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ViewIssue" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewIssue.successfulViewTicket" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JiraTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ViewIssue" />
+      <option name="METHOD_NAME" value="successfulViewTicket" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.CreateIssue" />
+      <item itemvalue="TestNG.CreateIssue.cancelCreateIssue" />
+      <item itemvalue="TestNG.ViewIssue" />
+      <item itemvalue="TestNG.ViewIssue.successfulViewTicket" />
+      <item itemvalue="TestNG.C:/Users/Olga/IdeaProjects/JiraTests/testng.xml" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/Olga/IdeaProjects/JiraTests/testng.xml" />
+        <item itemvalue="TestNG.ViewIssue.successfulViewTicket" />
+        <item itemvalue="TestNG.ViewIssue" />
+        <item itemvalue="TestNG.CreateIssue.cancelCreateIssue" />
+        <item itemvalue="TestNG.CreateIssue" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed2ebc2f-afa1-4b64-8a36-76b9cd21eb6f" name="Default Changelist" comment="" />
+      <created>1594220497063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594220497063</updated>
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1594827282396</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594827282396</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added some changes to Create Issue and to AddComment">
+      <created>1594906060596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594906060596</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PageObject added to AddComment - part1">
+      <created>1594998317638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594998317638</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PageObject added to AddComment - part2">
+      <created>1594999911644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594999911644</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Parameters added to test">
+      <created>1595848070077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595848070077</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Methods execution order demo">
+      <created>1595935186260</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595935186260</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ParallelExecution added">
+      <created>1595948236179</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595948236179</updated>
+    </task>
+    <task id="LOCAL-00008" summary="cc">
+      <created>1596099191099</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596099191099</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix">
+      <created>1596099718439</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596099718439</updated>
+    </task>
+    <task id="LOCAL-00010" summary="remove config.yml">
+      <created>1596107962884</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596107962884</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add config.yml">
+      <created>1596108094722</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1596108094722</updated>
+    </task>
+    <task id="LOCAL-00012" summary="pom.xml edited">
+      <created>1596116564565</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596116564565</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added failing test">
+      <created>1596118779848</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596118779848</updated>
+    </task>
+    <task id="LOCAL-00014" summary="removed failing test">
+      <created>1596119181519</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1596119181519</updated>
+    </task>
+    <task id="LOCAL-00015" summary="cleanup">
+      <created>1596623033942</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1596623033942</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added cancelCreateIssue">
+      <created>1600094422582</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1600094422582</updated>
+    </task>
+    <task id="LOCAL-00017" summary="first image added">
+      <created>1601371555211</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601371555211</updated>
+    </task>
+    <task id="LOCAL-00018" summary="first image added">
+      <created>1601371760713</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1601371760713</updated>
+    </task>
+    <task id="LOCAL-00019" summary="cmd run results screen added">
+      <created>1601372266683</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1601372266683</updated>
+    </task>
+    <task id="LOCAL-00020" summary="cmd run results screen added">
+      <created>1601372281894</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1601372281894</updated>
+    </task>
+    <task id="LOCAL-00021" summary="cmd run results screen added">
+      <created>1601372642388</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601372642388</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="added some changes to Create Issue and to AddComment" />
+    <MESSAGE value="some" />
+    <MESSAGE value="PageObject added to AddComment - part1" />
+    <MESSAGE value="PageObject added to AddComment - part2" />
+    <MESSAGE value="Parameters added to test" />
+    <MESSAGE value="Methods execution order demo" />
+    <MESSAGE value="ParallelExecution added" />
+    <MESSAGE value="cc" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="remove config.yml" />
+    <MESSAGE value="add config.yml" />
+    <MESSAGE value="pom.xml edited" />
+    <MESSAGE value="added failing test" />
+    <MESSAGE value="removed failing test" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="added cancelCreateIssue" />
+    <MESSAGE value="first image added" />
+    <MESSAGE value="cmd run results screen added" />
+    <option name="LAST_COMMIT_MESSAGE" value="cmd run results screen added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2360" y="94" key="#Project_Structure" timestamp="1594220993610">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220993610" />
+    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595937539902">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1595937539902" />
+    <state x="2012" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1594986433024">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2012" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594986433024" />
+    <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1594973319229">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2685" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594973319229" />
+    <state x="2610" y="296" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594305410547">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="296" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594305410547" />
+    <state x="2609" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1596118559427">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2609" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596118559427" />
+    <state x="2663" y="385" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594305413844">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2663" y="385" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594305413844" />
+    <state x="561" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595342042488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="561" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595342042488" />
+    <state x="2481" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594907009929" />
+    <state x="2807" y="223" key="#xdebugger.evaluate" timestamp="1600093977192">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2807" y="223" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600093977192" />
+    <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1599210108591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599210108591" />
+    <state x="2659" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597247687368" />
+    <state x="2758" y="418" key="Github.ShareDialog" timestamp="1594827014567">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2758" y="418" key="Github.ShareDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594827014567" />
+    <state x="2682" y="218" key="Github.UntrackedFilesDialog" timestamp="1594827025766">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2682" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594827025766" />
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1601372360883">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372360883" />
+    <state width="1877" height="408" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601370298026" />
+    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1601372360882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372360882" />
+    <state width="1877" height="408" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601370298026" />
+    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1601372360882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372360882" />
+    <state width="1877" height="408" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601370298026" />
+    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1601372360883">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372360883" />
+    <state width="1877" height="408" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601370298026" />
+    <state width="1877" height="202" key="GridCell.Tab.1.bottom" timestamp="1600253618935">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600082756389" />
+    <state width="1877" height="202" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600253618935" />
+    <state width="1877" height="202" key="GridCell.Tab.1.center" timestamp="1600253618935">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600082756389" />
+    <state width="1877" height="202" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600253618935" />
+    <state width="1877" height="202" key="GridCell.Tab.1.left" timestamp="1600253618935">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600082756389" />
+    <state width="1877" height="202" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600253618935" />
+    <state width="1877" height="202" key="GridCell.Tab.1.right" timestamp="1600253618935">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600082756389" />
+    <state width="1877" height="202" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600253618935" />
+    <state x="540" y="263" key="IDE.errors.dialog" timestamp="1601371362549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="263" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601371362549" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1595514794934">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595514794934" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1594306739667">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594306739667" />
+    <state x="552" y="253" width="816" height="523" key="Vcs.Push.Dialog.v2" timestamp="1601372644329">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372644329" />
+    <state x="2472" y="253" width="816" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600094430371" />
+    <state x="664" y="412" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1601372356901">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="412" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601372356901" />
+    <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596098778872">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595514704836" />
+    <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596098778872" />
+    <state x="342" y="181" key="new project wizard" timestamp="1599209676664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="181" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599209676664" />
+    <state x="2262" y="181" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596621160932" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="createIssue.cancelCreateButton" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
